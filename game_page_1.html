@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>奇趣数学岛 - 游戏页面</title>
+</head>
+<body>
+    <!-- 根据游戏的设计，展示相关的数学问题或挑战 -->
+    <h2>游戏1 - 几何图形之谜</h2>
+    <p>问题1：请在下面的图形中找出正方形。</p>
+    <img src="A.png" alt="几何图形">
+    <ul>
+        <li><input type="radio" name="answer" value="A">A</li>
+        <li><input type="radio" name="answer" value="B">B</li>
+        <li><input type="radio" name="answer" value="C">C</li>
+    </ul>
+    <button onclick="checkAnswer()">提交答案</button>
+
+    <script>
+       function checkAnswer() {
+    // 获取选择的答案
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+    if (!selectedAnswer) {
+        // 如果没有选择答案，提示玩家选择一个答案
+        alert("请先选择一个答案！");
+        return;
+    }
+
+    // 获取选中的答案值
+    const userAnswer = selectedAnswer.value;
+
+    // 假设正确答案是 "A"，这里只是示例，实际应根据游戏设计来设置正确答案
+    const correctAnswer = "A";
+
+    if (userAnswer === correctAnswer) {
+        // 答案正确，展示正确的反馈
+        alert("回答正确！你真棒！");
+        // 可以在此处增加玩家获得的奖励等逻辑
+    } else {
+        // 答案错误，展示错误的反馈
+        alert("回答错误！再试一次吧！");
+        // 可以在此处根据需要增加重新挑战或提示正确答案等逻辑
+    }
+
+    // 这里可以继续编写相关逻辑，比如更新游戏进度、跳转到下一个游戏页面等
+}
+
+    </script>
+</body>
+</html>

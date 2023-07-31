@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>奇趣数学岛 - 角色选择</title>
+</head>
+<body>
+    <h2>请选择您喜欢的角色</h2>
+    <div>
+        <img src="character_1.png" onclick="selectCharacter(1)" alt="角色1">
+        <img src="character_2.png" onclick="selectCharacter(2)" alt="角色2">
+        <!-- 其他角色图片 -->
+    </div>
+
+    <script>
+        function selectCharacter(characterId) {
+            // 保存选中的角色信息，例如使用 localStorage
+            localStorage.setItem("selectedCharacter", characterId);
+            // 跳转到主菜单/岛屿地图页面
+            window.location.href = "island_map.html";
+        }
+    </script>
+</body>
+</html>
